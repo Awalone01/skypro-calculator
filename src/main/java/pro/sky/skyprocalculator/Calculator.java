@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/calculator")
 public class Calculator {
+
     private final CalculatorService calculatorService;
 
     public Calculator(CalculatorService calculatorService) {
@@ -51,12 +52,7 @@ public class Calculator {
                            @RequestParam(value = "num2", required = false) Integer num2) {
         if (num1 == null || num2 == null) {
             return "Введите значение";
-        }   if (num2 == 0) {
-            return "Деление на 0 запрещено.";
         }
-//        else if (num1 == Integer.parseInt(null) || num2 == Integer.parseInt(null) ) {
-//            return "Введите значение";
-//        }
         return num1 + "/" + num2 + "= " + calculatorService.division(num1, num2);
     }
 }
