@@ -12,5 +12,7 @@ public class CalculatorOperationConstants {
 
     public static final int THREE = 3;
 
+    public static final int FOUR = 4;
+
 
 }

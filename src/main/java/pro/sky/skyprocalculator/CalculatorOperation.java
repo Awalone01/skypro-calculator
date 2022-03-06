@@ -24,7 +24,7 @@ public class CalculatorOperation implements CalculatorService {
     @Override
     public double division(@RequestParam("num1") int num1, @RequestParam("num2") int num2) {
         if (num2 == 0) {
-            throw new IllegalArgumentException("Делить на ноль нельзя!");
+            throw new IllegalArgumentException1();
         }
         return (double) num1 / num2;
     }
